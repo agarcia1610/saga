@@ -10,7 +10,7 @@ public class QuizResource {
 	
 	@GetMapping("/hola")
 	public String hola(){
-		return "petición de Get";
+		return "Hola Mundo";
 	}
 
 }
