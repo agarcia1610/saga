@@ -1,13 +1,38 @@
 package com.saganet.quiz.application;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.io.Serializable;
 
-@Setter
-@Getter
-public class EntityEO {
+import org.apache.ibatis.type.Alias;
 
-  String id;
-  String name;
+import com.saganet.database.EntityObject;
 
+@Alias("EntityEO")
+public class EntityEO extends EntityObject implements Serializable {
+
+	private static final long serialVersionUID = -3457712605244462104L;
+	
+	private Integer id;
+	private String name;
+	
+	
+	@Override
+	public String toString() {
+		return "EntityEO [id=" + id + ", name=" + name + "]";
+	}
+	@Override
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	
 }
